@@ -8,13 +8,20 @@ export const RouterHead = component$(() => {
   const head = useDocumentHead();
   const loc = useLocation();
 
+  const currentPath = loc.url.pathname.split("/")[1];
+  console.log("parh", currentPath);
+
   return (
     <>
-      <title>{head.title}</title>
-
       <link rel="canonical" href={loc.url.href} />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+      <link rel="icon" type="image/svg+xml" href="/logo.png" />
+
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin />
+      <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet"></link>
+
+      <title>{currentPath === "" ? "Portfolio" : "Portfolio - " + currentPath}</title>
 
       {head.meta.map((m) => (
         <meta key={m.key} {...m} />
