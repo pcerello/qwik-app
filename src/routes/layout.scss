@@ -2,8 +2,8 @@ body {
   background-color: #161616;
 
   color: white;
-  overflow-x: hidden;
-  font-size: 24px;
+  overflow: auto;
+  font-size: 20px;
 
   > #app{
 
@@ -30,24 +30,12 @@ body {
   }
 
   &::-webkit-scrollbar {
-    width: 6px;
+    width: 0px;
     padding: 5px;
     margin: 5px;
   }
 
-  &::-webkit-scrollbar-track {
-    background: transparent;
-    border-radius: 10px;
-  }
 
-  &::-webkit-scrollbar-thumb {
-    background: #ca9e7b;
-    border-radius: 10px;
-  }
-
-  &::-webkit-scrollbar-thumb:hover {
-    background: #b49569;
-  }
 
 }
 

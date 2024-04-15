@@ -1,5 +1,5 @@
 import { component$, useStyles$ } from "@builder.io/qwik";
-
+import Image from "../../public/girl.png?jsx";
 import styles from "./index.scss?inline";
 
 export default component$(() => {
@@ -14,10 +14,14 @@ export default component$(() => {
         </p>
       </div>
       <div class="trailer">
-        <img src="/girl.png" width="340" height={340} alt="trailer" />
-        <div class="trailer-text">Projets</div>
-        <div class="trailer-text">Skills</div>
-        <div class="trailer-text">Expériences</div>
+        <div class="down">
+          <Image style={{ width: "340px", height: "340px" }} />
+        </div>
+        <div class="up">
+          <div class="trailerText">Projets</div>
+          <div class="trailerText short">Skills</div>
+          <div class="trailerText">Expériences</div>
+        </div>
       </div>
     </div>
   );

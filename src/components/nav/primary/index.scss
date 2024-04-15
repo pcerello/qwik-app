@@ -30,7 +30,6 @@ $button-bg-color: #fffffe;
 
   a.name {
     position: absolute;
-    margin-left: 50px;
     line-height: 1.4em;
   }
 
@@ -38,10 +37,10 @@ $button-bg-color: #fffffe;
     position: relative;
     width: 100px;
     top: 15px;
-    left: 20px;
+    left: 15px;
     color: rgba($color: #ffffff, $alpha: 0.25);
     line-height: 1.4em;
-    margin-left: 35px;
+
   }
 
   a.button-home {
@@ -51,10 +50,17 @@ $button-bg-color: #fffffe;
     font-size: 20px;
     transition: border-radius 0.5s;
     color: #161616;
+    width: 130px;
+    text-align: center;
 
     &.purple {
       background-color: #8c07ed;
       color: white;
+    }
+
+    &.active {
+      font-weight: bold;
+    
     }
   }
 
@@ -62,7 +68,45 @@ $button-bg-color: #fffffe;
   .right {
     display: flex;
     align-items: center;
-    margin: 12.25px;
     gap: 20px;
+    font-size: 24px;
+  }
+
+  .right {
+    margin-right: 64px;
+  }
+
+  @media screen and (max-width: 1150px){
+    .right {
+      gap: 0px;
+      transition: gap 0.5s;
+    }
+  }
+
+  @media screen and (max-width: 1000px){
+    a.button-home {
+      width: 100px;
+      padding: 10px 15px;
+      font-size: 16px;
+      transition: width 0.5s, padding 0.5s, font-size 0.5s;
+    }
+  }
+
+  @media screen and (max-width: 880px){
+    a.button-home {
+      width: 80px;
+      padding: 5px 10px;
+      font-size: 12px;
+    }
+
+    .right {
+      margin-right: 32px;
+    }
+  }
+
+  .left {
+    margin-left: 64px;
   }
 }
+
+

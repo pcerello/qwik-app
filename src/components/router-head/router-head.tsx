@@ -9,7 +9,7 @@ export const RouterHead = component$(() => {
   const loc = useLocation();
 
   const currentPath = loc.url.pathname.split("/")[1];
-  console.log("parh", currentPath);
+  console.log("path", currentPath);
 
   return (
     <>
@@ -20,7 +20,7 @@ export const RouterHead = component$(() => {
       <link rel="preconnect" href="https://fonts.googleapis.com" />
       <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin />
       <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet"></link>
-
+      <script src="https://kit.fontawesome.com/ba1be1c272.js" crossorigin="anonymous"></script>
       <title>{currentPath === "" ? "Portfolio" : "Portfolio - " + currentPath}</title>
 
       {head.meta.map((m) => (
