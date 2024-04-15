@@ -18,9 +18,9 @@ export const RouterHead = component$(() => {
       <link rel="icon" type="image/svg+xml" href="/logo.png" />
 
       <link rel="preconnect" href="https://fonts.googleapis.com" />
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin />
+      <link rel="preconnect" href="https://fonts.gstatic.com" />
       <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet"></link>
-      <script src="https://kit.fontawesome.com/ba1be1c272.js" crossorigin="anonymous"></script>
+      <script src="https://kit.fontawesome.com/ba1be1c272.js" crossOrigin="anonymous"></script>
       <title>{currentPath === "" ? "Portfolio" : "Portfolio - " + currentPath}</title>
 
       {head.meta.map((m) => (
