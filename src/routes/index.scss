@@ -203,7 +203,14 @@
   @media screen and (max-width: 768px) {
     padding: 32px;
     transition: padding 0.5s;
-    // tran
+    .intro{
+      > .trailer {
+        > .up {
+          left: 120px;
+          justify-content: end;
+        }
+      }
+    }
 
     .description {
       > h1 {
