@@ -1,6 +1,7 @@
 import { component$, useStyles$ } from "@builder.io/qwik";
-import Image from "../../public/girl.png?jsx";
+import Image from "../assets/girl.png?jsx";
 import styles from "./index.scss?inline";
+import Evo from "../assets/evo.jpg?jsx";
 
 export default component$(() => {
   useStyles$(styles);
@@ -45,6 +46,13 @@ export default component$(() => {
 
       <div class="blabla">
         <div class="blablaText">Grâce à mes études et à mon parcours, j'ai acquis à la fois des compétences techniques et des savoirs-être indispensables.</div>
+        
+        <div class="blablaImg">
+          <div class="img">
+          <Evo style={{ width: "864px", height: "440px" }} />
+          </div>
+          <div class="text">Adaptabilité</div>
+        </div>
       </div>
     </div>
   );

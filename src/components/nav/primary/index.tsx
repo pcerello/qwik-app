@@ -1,7 +1,7 @@
 import { component$, useStore, useStyles$, useTask$, useVisibleTask$ , $} from "@builder.io/qwik";
 import { Link, useLocation } from "@builder.io/qwik-city";
 import styles from "./index.scss?inline";
-import Image from "../../../../public/logo.png?jsx";
+import Image from "../../../assets/logo.png?jsx";
 
 export default component$(() => {
   useStyles$(styles);

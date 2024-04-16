@@ -9,13 +9,13 @@ export const RouterHead = component$(() => {
   const loc = useLocation();
 
   const currentPath = loc.url.pathname.split("/")[1];
-  console.log("path", currentPath);
+
 
   return (
     <>
       <link rel="canonical" href={loc.url.href} />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <link rel="icon" type="image/svg+xml" href="/logo.png" />
+      <link rel="icon" type="image/png" href="/logo.png" />
 
       <link rel="preconnect" href="https://fonts.googleapis.com" />
       <link rel="preconnect" href="https://fonts.gstatic.com" />

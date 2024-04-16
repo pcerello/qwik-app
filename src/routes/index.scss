@@ -72,9 +72,10 @@
     > .trailer {
       flex: 0.5;
       display: flex;
+      position: relative;
 
       > .down {
-        // position: absolute;
+        position: relative;
       }
 
       > .up {
@@ -83,10 +84,10 @@
         justify-content: center;
         align-items: center;
         gap: 20px;
-        position: relative;
+        position: absolute;
         height: 340px;
         width: 224px;
-        right: 100px;
+        left: 210px;
 
         > .trailerText {
           background-color: #f6f3ed;
@@ -139,16 +140,64 @@
   > .blabla {
     display: flex;
     justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 25px;
 
     > .blablaText {
       font-size: 40px;
       width: 75%;
       text-align: center;
     }
+
+    > .blablaImg {
+      position: relative;
+      > .img {
+        width: 100%;
+        height: 100%;
+        max-width: 864px;
+        max-height: 440px;
+        overflow: hidden;
+        position: relative;
+
+        > img {
+          width: 100%;
+          height: auto;
+          border-top-left-radius: 230px;
+          border-bottom-left-radius: 230px;
+          border-top-right-radius: 230px;
+          border-bottom-right-radius: 230px;
+        }
+      }
+      > .text {
+        position: absolute;
+        /* top: 13px; */
+        right: -100px;
+        bottom: calc(50% - 100px);
+        background-color: blueviolet;
+        /* padding: 50px; */
+        border-radius: 25px;
+        width: 200px;
+        height: 200px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 32px;
+        font-weight: 600;
+      }
+    }
   }
 
-  @media screen and (max-width: 1350px) {
-    flex-direction: column;
+  @media screen and (max-width: 1111px) {
+    .intro {
+      flex-direction: column;
+
+      > .trailer {
+        > .up {
+          left: 210px;
+        }
+      }
+    }
   }
 
   @media screen and (max-width: 768px) {
@@ -159,7 +208,7 @@
     .description {
       > h1 {
         width: 100%;
-        font-size: 45px;
+        font-size: 45px !important;
       }
 
       > p {
@@ -172,5 +221,43 @@
         right: 165px;
       }
     }
+
+    .topSkills {
+      flex-direction: column;
+      gap: 20px;
+      width: fit-content;
+      align-self: center;
+      align-items: center;
+    }
+
+    .blabla {
+      gap: 20px;
+      > .blablaText {
+        font-size: 32px;
+        width: 100%;
+      }
+
+      > .blablaImg {
+        > .img {
+          max-width: 100%;
+          max-height: 440px;
+          border-radius: 230px;
+
+          > img {
+            width: 100% !important;
+            height: auto !important;
+          }
+        }
+
+        > .text {
+          right: 0;
+          bottom: 0;
+          width: 100px;
+          height: 100px;
+          font-size: 16px;
+        }
+      }
+    }
+
   }
 }
