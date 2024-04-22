@@ -2,6 +2,7 @@ import { component$, useStyles$ } from "@builder.io/qwik";
 import Image from "../assets/girl.png?jsx";
 import styles from "./index.scss?inline";
 import Evo from "../assets/evo.jpg?jsx";
+import Fond from "../assets/fond.png?jsx";
 
 export default component$(() => {
   useStyles$(styles);
@@ -46,14 +47,64 @@ export default component$(() => {
 
       <div class="blabla">
         <div class="blablaText">Grâce à mes études et à mon parcours, j'ai acquis à la fois des compétences techniques et des savoirs-être indispensables.</div>
-        
+
         <div class="blablaImg">
+          <div class="fond">
+            <Fond style={{ width: "296px", height: "296px" }} />
+          </div>
           <div class="img">
-          <Evo style={{ width: "864px", height: "440px" }} />
+            <Evo style={{ width: "864px", height: "440px" }} />
           </div>
           <div class="text">Adaptabilité</div>
         </div>
       </div>
+      <div class="otherSkills">
+        <div class="header">
+          <div class="title">Quelques compétences</div>
+          <div class="button">Voir tout</div>
+        </div>
+
+        <div class="skills">
+          <div class="row">
+            <div class="cell">
+              <div class="number">01</div>
+              <div class="spaceline"></div>
+              <div class="skill">Web Design</div>
+            </div>
+            <div class="cell">
+              <div class="number">2</div>
+              <div class="spaceline"></div>
+              <div class="skill">Frontend</div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="cell">
+            <div class="number">3</div>
+            <div class="spaceline"></div>
+            <div class="skill">Backend</div>
+            </div>
+            <div class="cell">
+            <div class="number">4</div>
+            <div class="spaceline"></div>
+            <div class="skill">BDD</div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="cell">
+            <div class="number">5</div>
+            <div class="spaceline"></div>
+            <div class="skill">Responsive Design</div>
+            </div>
+            <div class="cell">
+            <div class="number">6</div>
+            <div class="spaceline"></div>
+            <div class="skill">Web Accessibility</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
     </div>
   );
 });
