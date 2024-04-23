@@ -1,0 +1,11 @@
+#legaleNotice {
+    display: flex;
+    flex-direction: column;
+    padding: 64px;
+    transition: padding 0.5s;
+    overflow: auto;
+
+    h1 {
+        text-align: center;
+    }
+}

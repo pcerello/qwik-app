@@ -268,6 +268,38 @@
     }
   }
 
+  @media screen and (max-width: 935px) {
+    .otherSkills {
+      > .header {
+        > .title {
+          font-size: 32px;
+          transition: font-size 0.5s;
+        }
+
+        > .button {
+          font-size: 16px;
+          transition: font-size 0.5s;
+        }
+      }
+
+      > .skills {
+        > .row {
+          > .cell {
+            > .number {
+              font-size: 48px;
+              transition: font-size 0.5s;
+            }
+
+            > .skill {
+              font-size: 24px;
+              transition: font-size 0.5s;
+            }
+          }
+        }
+      }
+    }
+  }
+
   @media screen and (max-width: 768px) {
     padding: 32px;
     transition: padding 0.5s;
@@ -342,6 +374,37 @@
             width: 100% !important;
             height: auto !important;
           }
+        }
+      }
+    }
+
+    .otherSkills{
+      > .header {
+        > .title {
+          font-size: 24px;
+        }
+
+        > .button {
+          font-size: 12px;
+        }
+      }
+      > .skills {
+        > .row {
+          grid-template-columns: 1fr;
+          gap: 20px;
+
+          > .cell {
+            grid-template-columns: auto 1fr auto;
+
+            > .number {
+              font-size: 32px;
+            }
+
+            > .skill {
+              font-size: 16px;
+            }
+          }
+          
         }
       }
     }

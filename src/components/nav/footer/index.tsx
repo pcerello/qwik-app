@@ -1,6 +1,7 @@
 import { component$, useStyles$, useTask$ } from "@builder.io/qwik";
 import { Link, useLocation } from "@builder.io/qwik-city";
 import styles from "./index.scss?inline";
+import qwikIcon from "../../../assets/qwik-color.svg";
 
 export default component$(() => {
   useStyles$(styles);
@@ -38,7 +39,10 @@ export default component$(() => {
         <div class="column">
           <div class="footerText">© 2024 Pauline Cerello.</div>
           <div class="footerText">Tous droits réservés.</div>
-          <div class="footerText">Site créé avec Qwik</div>
+          <div class="footerText">Site créé avec Qwik &nbsp;
+          
+            <img src={qwikIcon} alt="Qwik logo" class="qwikIcon" width={18} height={18} />
+          </div>
           <Link href="/legalNotice" class="footerText">
             Mentions légales
           </Link>

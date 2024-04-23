@@ -21,6 +21,11 @@ $button-bg-color: #fffffe;
       display: flex;
       flex-direction: column;
       gap: 8px;
+
+      > .footerText {
+        display: flex;
+    align-items: center;
+      }
     }
   }
 
@@ -46,6 +51,52 @@ $button-bg-color: #fffffe;
     &:hover {
       color: blueviolet;
 
+    }
+  }
+
+  @media screen and (max-width: 1320px){
+    padding: 72px 60px;
+
+    .info {
+      grid-template-columns: 4fr 1fr 1fr;
+      gap: 20px;
+    }
+  }
+
+  @media screen and (max-width: 1150px){
+    
+    padding: 72px 60px;
+
+    .info {
+      grid-template-columns: 3fr 1fr 1fr;
+      gap: 20px;
+    }
+  }
+
+  @media screen and (max-width: 950px){
+    
+    padding: 72px 60px;
+
+    .info {
+      grid-template-columns: 2fr 1fr 1fr;
+      gap: 20px;
+    }
+  }
+
+  @media screen and (max-width: 750px){
+    
+    padding: 72px 60px;
+
+    .info {
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 20px;
+    }
+  }
+
+  @media screen and (max-width: 499px){
+    
+    > .social {
+      margin-top: 0;
     }
   }
 }
