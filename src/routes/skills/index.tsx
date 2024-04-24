@@ -4,5 +4,5 @@ import styles from "./index.scss?inline";
 
 export default component$(() => {
   useStyles$(styles);
-  return <div id="page-content">contact</div>;
+  return <div id="page-content">mes skills</div>;
 });

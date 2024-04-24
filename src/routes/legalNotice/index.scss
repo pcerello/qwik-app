@@ -1,11 +1,21 @@
 #legaleNotice {
-    display: flex;
-    flex-direction: column;
-    padding: 64px;
-    transition: padding 0.5s;
-    overflow: auto;
+  display: flex;
+  flex-direction: column;
+  padding: 64px;
+  transition: padding 0.5s;
+  overflow: auto;
 
-    h1 {
-        text-align: center;
+  h1 {
+    text-align: center;
+  }
+
+  a {
+    &:hover {
+      color: blueviolet;
     }
+  }
+
+  @media screen and (max-width: 450px) {
+    padding: 32px;
+  }
 }

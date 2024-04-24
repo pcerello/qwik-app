@@ -12,8 +12,10 @@ export default component$(() => {
         <div class="description">
           <h1>Je suis Pauline, développeuse web, passionnée par la vie !</h1>
           <p>
-            Bienvenue sur mon portfolio ! Explorez mon parcours dans le développement web et découvrez ma passion pour la vie à travers mes aventures. Malgré
-            les obstacles rencontrés, je me bats pour vivre ma passion.
+            Bienvenue sur mon portfolio ! Explorez mon parcours dans le
+            développement web et découvrez ma passion pour la vie à travers mes
+            aventures. Malgré les obstacles rencontrés, je me bats pour vivre ma
+            passion.
           </p>
         </div>
         <div class="trailer">
@@ -46,7 +48,10 @@ export default component$(() => {
       <div class="spaceline"></div>
 
       <div class="blabla">
-        <div class="blablaText">Grâce à mes études et à mon parcours, j'ai acquis à la fois des compétences techniques et des savoirs-être indispensables.</div>
+        <div class="blablaText">
+          Grâce à mes études et à mon parcours, j'ai acquis à la fois des
+          compétences techniques et des savoirs-être indispensables.
+        </div>
 
         <div class="blablaImg">
           <div class="fond">
@@ -61,7 +66,9 @@ export default component$(() => {
       <div class="otherSkills">
         <div class="header">
           <div class="title">Quelques compétences</div>
-          <div class="button">Voir tout</div>
+          <a href="/skills" class="button">
+            Voir tout
+          </a>
         </div>
 
         <div class="skills">
@@ -79,32 +86,30 @@ export default component$(() => {
           </div>
           <div class="row">
             <div class="cell">
-            <div class="number">3</div>
-            <div class="spaceline"></div>
-            <div class="skill">Backend</div>
+              <div class="number">3</div>
+              <div class="spaceline"></div>
+              <div class="skill">Backend</div>
             </div>
             <div class="cell">
-            <div class="number">4</div>
-            <div class="spaceline"></div>
-            <div class="skill">BDD</div>
+              <div class="number">4</div>
+              <div class="spaceline"></div>
+              <div class="skill">BDD</div>
             </div>
           </div>
           <div class="row">
             <div class="cell">
-            <div class="number">5</div>
-            <div class="spaceline"></div>
-            <div class="skill">Responsive Design</div>
+              <div class="number">5</div>
+              <div class="spaceline"></div>
+              <div class="skill">Responsive Design</div>
             </div>
             <div class="cell">
-            <div class="number">6</div>
-            <div class="spaceline"></div>
-            <div class="skill">Web Accessibility</div>
+              <div class="number">6</div>
+              <div class="spaceline"></div>
+              <div class="skill">Web Accessibility</div>
             </div>
           </div>
         </div>
       </div>
-
-
     </div>
   );
 });

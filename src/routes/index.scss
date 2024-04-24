@@ -219,6 +219,10 @@
         display: flex;
         align-items: center;
         font-weight: bold;
+
+        &:hover {
+          color: blueviolet;
+        }
       }
     }
 
@@ -378,7 +382,7 @@
       }
     }
 
-    .otherSkills{
+    .otherSkills {
       > .header {
         > .title {
           font-size: 24px;
@@ -404,7 +408,6 @@
               font-size: 16px;
             }
           }
-          
         }
       }
     }

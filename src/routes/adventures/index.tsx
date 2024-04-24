@@ -1,14 +1,8 @@
-import { component$, useStyles$ } from '@builder.io/qwik';
+import { component$, useStyles$ } from "@builder.io/qwik";
 
-import styles from './index.scss?inline';
-
+import styles from "./index.scss?inline";
 
 export default component$(() => {
-
-    useStyles$(styles);
-    return (
-        <div id="page-content">
-          aventures
-        </div>
-    );
+  useStyles$(styles);
+  return <div id="page-content">aventures</div>;
 });
