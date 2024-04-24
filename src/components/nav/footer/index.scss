@@ -50,6 +50,11 @@ $button-bg-color: #fffffe;
       justify-content: center;
       align-items: center;
       color: $bg-color-1;
+
+      &:hover {
+        background-color: #161616;
+        color: white;
+      }
     }
   }
 
