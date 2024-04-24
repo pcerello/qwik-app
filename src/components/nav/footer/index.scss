@@ -5,12 +5,12 @@ $button-bg-color: #fffffe;
   position: relative;
   bottom: 0;
   width: 100%;
-  height: 302px;
+  height: auto;
   background-color: $bg-color-1;
   z-index: 1000;
   display: flex;
   flex-direction: column;
-  padding: 72px 120px;
+  padding: 32px 64px;
 
   > .info {
     display: grid;
@@ -24,7 +24,14 @@ $button-bg-color: #fffffe;
 
       > .footerText {
         display: flex;
-    align-items: center;
+        align-items: center;
+        &.large {
+          font-size: 24px;
+        }
+        &.big {
+          font-size: 32px;
+        
+        }
       }
     }
   }
@@ -48,14 +55,15 @@ $button-bg-color: #fffffe;
 
   a {
     width: fit-content;
+    display: flex;
+    align-items: center;
     &:hover {
       color: blueviolet;
-
     }
   }
 
-  @media screen and (max-width: 1320px){
-    padding: 72px 60px;
+
+  @media screen and (max-width: 1220px) {
 
     .info {
       grid-template-columns: 4fr 1fr 1fr;
@@ -63,42 +71,102 @@ $button-bg-color: #fffffe;
     }
   }
 
-  @media screen and (max-width: 1150px){
-    
-    padding: 72px 60px;
+  @media screen and (max-width: 1110px) {
 
     .info {
       grid-template-columns: 3fr 1fr 1fr;
       gap: 20px;
+
+      > .column {
+         > .footerText {
+          &.large {
+            font-size: 20px;
+          }
+          &.big {
+            font-size: 28px;
+          }
+        }
+      }
     }
+
   }
 
-  @media screen and (max-width: 950px){
-    
-    padding: 72px 60px;
+  @media screen and (max-width: 950px) {
 
     .info {
       grid-template-columns: 2fr 1fr 1fr;
       gap: 20px;
+
+      > .column {
+         > .footerText {
+          &.large {
+            font-size: 16px;
+          }
+          &.big {
+            font-size: 24px;
+          }
+        }
+      }
     }
   }
 
-  @media screen and (max-width: 750px){
-    
-    padding: 72px 60px;
+  @media screen and (max-width: 800px) {
 
     .info {
       grid-template-columns: 1fr 1fr 1fr;
       gap: 20px;
+
+      > .column {
+         > .footerText {
+          &.large {
+            font-size: 14px;
+          }
+          &.big {
+            font-size: 20px;
+          }
+        }
+      }
     }
+    
+  }
+  @media screen and (max-width: 650px) {
+    padding: 32px 32px;
+
+    .info {
+      grid-template-columns: 2fr 1fr 2fr;
+      gap: 20px;
+
+      > .column {
+         > .footerText {
+          &.large {
+            font-size: 14px;
+          }
+          &.big {
+            font-size: 20px;
+          }
+        }
+      }
+    }
+    
   }
 
-  @media screen and (max-width: 499px){
-    
+  @media screen and (max-width: 499px) {
     > .social {
       margin-top: 0;
     }
+
+    > .info {
+      > .column {
+        > .footerText {
+          &.col {
+            flex-direction: column;
+            align-items: baseline;
+          
+          }
+        }
+      }
+    }
+
+    
   }
 }
-
-

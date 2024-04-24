@@ -55,13 +55,23 @@ $button-bg-color: #fffffe;
     text-align: center;
     transition: width 0.5s, padding 0.5s, font-size 0.5s;
 
+    &:hover {
+      background-color: #161616;
+      color: white;
+    }
+
     &.purple {
       background-color: #8c07ed;
       color: white;
+
+      &:hover {
+        background-color: #5f03b2;
+      }
     }
 
     &.active {
       font-weight: bold;
+
     
     }
   }

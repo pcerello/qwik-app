@@ -16,8 +16,9 @@ export default component$(() => {
     <nav class="cpt-footer-nav">
       <div class="info">
         <div class="column">
-          <div class="footerText">Code Portfolio</div>
-          <div class="footerText">Pauline, Développeuse Web</div>
+          <div class="footerText large">Code Portfolio</div>
+          <br />
+          <div class="footerText big">Pauline, Développeuse Web</div>
         </div>
         <div class="column">
           <Link href="/" class="button-home ">
@@ -39,9 +40,10 @@ export default component$(() => {
         <div class="column">
           <div class="footerText">© 2024 Pauline Cerello.</div>
           <div class="footerText">Tous droits réservés.</div>
-          <div class="footerText">Site créé avec Qwik &nbsp;
+          <div class="footerText col">Site créé avec &nbsp; <a href="https://qwik.dev/" target="_blank">
+          Qwik &nbsp;
           
-            <img src={qwikIcon} alt="Qwik logo" class="qwikIcon" width={18} height={18} />
+            <img src={qwikIcon} alt="Qwik logo" class="qwikIcon" width={18} height={18} /></a>
           </div>
           <Link href="/legalNotice" class="footerText">
             Mentions légales

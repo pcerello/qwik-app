@@ -1,4 +1,4 @@
-import { component$, useStore, useStyles$, useTask$, useVisibleTask$ , $} from "@builder.io/qwik";
+import { component$, useStore, useStyles$, useTask$, useVisibleTask$, $ } from "@builder.io/qwik";
 import { Link, useLocation } from "@builder.io/qwik-city";
 import styles from "./index.scss?inline";
 import Image from "../../../assets/logo.png?jsx";
@@ -13,7 +13,6 @@ export default component$(() => {
     track(() => loc.isNavigating);
   });
 
-  
   const dropdownOpen = useStore({ value: false });
 
   const setDropdownOpen = $(() => {
@@ -24,7 +23,7 @@ export default component$(() => {
     }
   });
 
-  const store = useStore({ someKey:  1500});
+  const store = useStore({ someKey: 1500 });
   // eslint-disable-next-line qwik/no-use-visible-task
   useVisibleTask$(() => {
     store.someKey = window.innerWidth;
@@ -34,10 +33,21 @@ export default component$(() => {
       console.log("store.someKey", store.someKey);
       dropdownOpen.value = false;
     });
+  });
 
-    
+  // fermer le dropdown si on clique en dehors
+
+  // eslint-disable-next-line qwik/no-use-visible-task
+  useVisibleTask$(() => {
+    window.addEventListener("click", (e) => {
+      if (dropdownOpen.value === true) {
+        // @ts-ignore
+        if (e.target.closest(".dropdown") === null && e.target.closest(".fa-bars") === null) {
+          dropdownOpen.value = false;
+        }
+      }
+    });
   } );
-
 
   return (
     <nav class="cpt-primary-nav">
@@ -49,31 +59,31 @@ export default component$(() => {
         <Image style={{ width: "70px", height: "70px" }} />
       </div>
 
-{
-  // burger menu si la largeur de l'écran est inférieure à 768px
-  store.someKey < 768 ? (
-    <div class="right">
-    <i class="fa-solid fa-bars" onClick$={()=> setDropdownOpen()}></i>
-    <div class={"dropdown " + (dropdownOpen.value === true ? "open" : "")}>
-      <Link href="/" class={"button-home " + (currentPath === "" ? "active" : "")}>
-        Accueil
-      </Link>
-      <Link href="/about" class={"button-home " + (currentPath === "about" ? "active" : "")}>
-        A propos
-      </Link>
-      <Link href="/projects" class={"button-home " + (currentPath === "projects" ? "active" : "")}>
-        Projets
-      </Link>
-      <Link href="/adventures" class={"button-home " + (currentPath === "adventures" ? "active" : "")}>
-        Aventures
-      </Link>
-      <Link href="/contact" class={"button-home purple " + (currentPath === "contact" ? "active" : "")}>
-        Contact
-      </Link>
-      </div>
-    </div>
-  ) : (
-    <div class="right">
+      {
+        // burger menu si la largeur de l'écran est inférieure à 768px
+        store.someKey < 768 ? (
+          <div class="right">
+            <i class="fa-solid fa-bars" onClick$={() => setDropdownOpen()}></i>
+            <div class={"dropdown " + (dropdownOpen.value === true ? "open" : "")}>
+              <Link href="/" class={"button-home " + (currentPath === "" ? "active" : "")}>
+                Accueil
+              </Link>
+              <Link href="/about" class={"button-home " + (currentPath === "about" ? "active" : "")}>
+                A propos
+              </Link>
+              <Link href="/projects" class={"button-home " + (currentPath === "projects" ? "active" : "")}>
+                Projets
+              </Link>
+              <Link href="/adventures" class={"button-home " + (currentPath === "adventures" ? "active" : "")}>
+                Aventures
+              </Link>
+              <Link href="/contact" class={"button-home purple " + (currentPath === "contact" ? "active" : "")}>
+                Contact
+              </Link>
+            </div>
+          </div>
+        ) : (
+          <div class="right">
             <Link href="/" class={"button-home " + (currentPath === "" ? "active" : "")}>
               Accueil
             </Link>
@@ -89,10 +99,9 @@ export default component$(() => {
             <Link href="/contact" class={"button-home purple " + (currentPath === "contact" ? "active" : "")}>
               Contact
             </Link>
-          </div>)
-}
-          
-        
+          </div>
+        )
+      }
     </nav>
   );
 });
