@@ -56,7 +56,7 @@ export default component$(() => {
           Code Portfolio
         </Link>
         <p class="name">Cerello Pauline</p>
-        <Image style={{ width: "70px", height: "70px" }} />
+        <Image style={{ width: "70px", height: "70px" }} alt="logo du site, fille au cheveux violet sur fond violet" title="logo" aria-label="logo du site, fille au cheveux violet sur fond violet" />
       </div>
 
       {

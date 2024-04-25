@@ -40,7 +40,7 @@ export default component$(() => {
         <div class="column">
           <div class="footerText">© 2024 Pauline Cerello.</div>
           <div class="footerText">Tous droits réservés.</div>
-          <div class="footerText col">Site créé avec &nbsp; <a href="https://qwik.dev/" target="_blank">
+          <div class="footerText col">Site créé avec &nbsp; <a href="https://qwik.dev/" target="_blank" title="Qwik" aria-label="Qwik">
           Qwik &nbsp;
           
             <img src={qwikIcon} alt="Qwik logo" class="qwikIcon" width={18} height={18} /></a>
@@ -52,13 +52,13 @@ export default component$(() => {
         </div>
       </div>
       <div class="social">
-        <a href="https://github.com/pcerello/" target="_blank" class="socialIcon">
+        <a href="https://github.com/pcerello/" target="_blank" class="socialIcon" title="GitHub" aria-label="GitHub">
           <i class="fa-brands fa-github"></i>
         </a>
-        <a href="https://www.linkedin.com/in/pauline-cerello-developpeuse-web-full-stack/" target="_blank" class="socialIcon">
+        <a href="https://www.linkedin.com/in/pauline-cerello-developpeuse-web-full-stack/" target="_blank" class="socialIcon" title="LinkedIn" aria-label="LinkedIn">
           <i class="fa-brands fa-linkedin"></i>
         </a>
-        <a href="https://pcerello.github.io/" target="_blank" class="socialIcon">
+        <a href="https://pcerello.github.io/" target="_blank" class="socialIcon" title="Ancien Portfolio" aria-label="Ancien Portfolio">
           <i class="fa-solid fa-globe"></i>
         </a>
       </div>

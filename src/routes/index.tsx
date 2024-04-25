@@ -20,7 +20,7 @@ export default component$(() => {
         </div>
         <div class="trailer">
           <div class="down">
-            <Image style={{ width: "340px", height: "340px" }} />
+            <Image style={{ width: "340px", height: "340px" }} alt="fille aux cheveux violet, qui tient un ordinateur portable" aria-label="fille aux cheveux violet, qui tient un ordinateur portable" />
           </div>
           <div class="up">
             <div class="trailerText">Projets</div>
@@ -55,10 +55,10 @@ export default component$(() => {
 
         <div class="blablaImg">
           <div class="fond">
-            <Fond style={{ width: "296px", height: "296px" }} />
+            <Fond style={{ width: "296px", height: "296px" }} alt="fond violet avec des étoiles" aria-label="fond violet avec des étoiles" />
           </div>
           <div class="img">
-            <Evo style={{ width: "864px", height: "440px" }} />
+            <Evo style={{ width: "864px", height: "440px" }} alt="setup de développeuse web" aria-label="setup de développeuse web" />
           </div>
           <div class="text">Adaptabilité</div>
         </div>
